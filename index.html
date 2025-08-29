@@ -3,38 +3,58 @@
 <head>
     <title>H S VISHAL's Resume</title>
     <style>
+        /* Base styles for body */
         body {
             font-family: sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #1a1a1a; /* Dark background for the page */
+            color: #e0e0e0; /* Light text color */
         }
+
+        /* Container for the download button */
         .download-container {
             padding: 20px;
-            background-color: #f7f7f7;
-            border-bottom: 1px solid #ddd;
+            background-color: #2a2a2a; /* Slightly lighter dark background for container */
+            border-bottom: 1px solid #444; /* Darker border */
         }
+
+        /* Styles for the download button */
         .button {
             display: inline-block;
             padding: 10px 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #555; /* Darker border for button */
             border-radius: 5px;
             text-decoration: none;
-            color: #333;
-            background-color: #fff;
+            color: #e0e0e0; /* Light text for button */
+            background-color: #3a3a3a; /* Dark background for button */
+            transition: background-color 0.3s ease; /* Smooth hover transition */
         }
+
+        /* Hover state for the download button */
         .button:hover {
-            background-color: #e7e7e7;
+            background-color: #4a4a4a; /* Lighter dark background on hover */
         }
+
+        /* Styles for the embedded PDF viewer */
         iframe {
             width: 100%;
-            height: calc(100vh - 80px); /* Adjust height to fill the remaining screen */
+            /* Height calculation: 100% viewport height minus the download-container's height + padding */
+            /* Assuming download-container height is roughly 40px (padding) + button height, round to 80-100px for safety */
+            height: calc(100vh - 80px); 
             border: none;
+            /* In some browsers, the iframe itself might have a default light background. 
+               This can be hard to override directly for the PDF content, 
+               but ensures the iframe border is gone. */
         }
     </style>
 </head>
-<body>    
+<body>
+    
     <iframe src="H_S_VISHAL.pdf"></iframe>
-    <a href="H_S_VISHAL.pdf" download="H_S_VISHAL.pdf" class="button">Download Resume</a>
+    <div class="download-container">
+        <a href="H_S_VISHAL.pdf" download="H_S_VISHAL.pdf" class="button">Download Resume</a>
+    </div>
 </body>
 </html>
