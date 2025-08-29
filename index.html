@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>H S VISHAL</title>
+    <title>H S VISHAL's Resume</title>
     <style>
         body {
             font-family: sans-serif;
             text-align: center;
-            padding: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        .download-container {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #ddd;
         }
         .button {
             display: inline-block;
             padding: 10px 20px;
-            margin: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             text-decoration: none;
             color: #333;
-            background-color: #f7f7f7;
+            background-color: #fff;
         }
         .button:hover {
             background-color: #e7e7e7;
         }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 80px); /* Adjust height to fill the remaining screen */
+            border: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Your Name's Resume</h1>
-    <p>
-        <a href="H_S_VISHAL.pdf" class="button">View Resume</a>
+    <div class="download-container">
         <a href="H_S_VISHAL.pdf" download="H_S_VISHAL.pdf" class="button">Download Resume</a>
-    </p>
+    </div>
+    
+    <iframe src="H_S_VISHAL.pdf"></iframe>
 </body>
 </html>
